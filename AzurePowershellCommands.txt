@@ -1,0 +1,14 @@
+deploy template
+
+  $templateFile = "C:\Users\Sherlocked\Desktop\Azure\azuredeploy.json"
+New-AzResourceGroupDeployment `
+  -Name firsttemplate `
+  -ResourceGroupName azuresgrg `
+  -TemplateFile $templateFile
+
+storage account 
+  $templateFile = "C:\Users\Sherlocked\Desktop\Azure\azurestorageaccount.json"
+New-AzResourceGroupDeployment `
+  -Name storageaccountadd `
+  -ResourceGroupName azuresgrg `
+  -TemplateFile $templateFile
