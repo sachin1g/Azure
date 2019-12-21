@@ -1,6 +1,6 @@
 deploy template
 
-  $templateFile = "C:\Users\Sherlocked\Desktop\Azure\azuredeploy.json"
+  $templateFile = "C:\Users\Sherlocked\Desktop\git\Azure\schemas\storagenamey.json"
 New-AzResourceGroupDeployment `
   -Name firsttemplate `
   -ResourceGroupName azuresgrg `
@@ -12,3 +12,25 @@ New-AzResourceGroupDeployment `
   -Name storageaccountadd `
   -ResourceGroupName azuresgrg `
   -TemplateFile $templateFile
+
+
+  storagename as parameter
+
+    $templateFile = "C:\Users\Sherlocked\Desktop\git\Azure\schemas\storagenameparameter.json"
+New-AzResourceGroupDeployment `
+  -Name addnameparameter `
+  -ResourceGroupName azuresgrg `
+  -TemplateFile $templateFile
+  -storageName  "storagenameparameter"
+
+Storage type allowed values as a parameter
+
+
+$templateFile = "C:\Users\Sherlocked\Desktop\git\Azure\schemas\storagetypesallowedvalues.json"
+New-AzResourceGroupDeployment `
+  -Name storagetypesallowedvalues `
+  -ResourceGroupName azuresgrg `
+  -TemplateFile $templateFile
+  -storageSKU  "Standard_ZRS"
+
+  storageSKU
