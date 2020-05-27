@@ -1,1 +1,1 @@
-Azure resourcemanager JSONs
+**Azure resource manager JSONs**
